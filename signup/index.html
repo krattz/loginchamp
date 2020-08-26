@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+           
+    <title>Sign up | Factory</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <a class="navbar-brand" href="index.html">Factory</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <!-- <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="release.html">Releases</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mixes.html">Mixes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gmnmix.html">Gmn Mix</a>
+                </li>
+            </ul> -->
+            <form class="form-inline" action="history.back()">
+                <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search"> -->
+                <button class="btn btn-success" type="submit" onclick="history.back()">Back</button>    
+            </form>  
+        </div>
+    </nav>
+<div class="container">
+    <h1>Sign up</h1>
+    <div class="row">
+        <form class= "col s6" id= "myForm" novalidate>
+            <div class="row">
+                <div class="input-field col s6">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="First Name" id="firstName" onfocusout="validateFirstName()" />
+                    <span class="helper-text"></span>
+                </div>
+                <div class="input-field col s6">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="Last Name" id="lastName" onfocusout="validateLastName()" />
+                    <span class="helper-text"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <label for="password">Password</label>
+                    <input type="password" name="Password" id="password" onfocusout="validatePassword()" />
+                    <span class="helper-text"></span>  
+                </div>
+                <div class="input-field col s6">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" name="Confirm Password" id="confirmPassword" onfocusout="validateConfirmPassword()" />
+                    <span class="helper-text"></span>  
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12" style="margin-bottom: 0px;">
+                    <label for="email">email</label>
+                    <input type="email" name="Email" id="email" onfocusout="validateEmail()" />
+                    <span class="helper-text"></span>
+                </div>
+            </div>
+        
+            <div class="radioButtons">
+                    <div class="selectOption" style="padding-bottom: 14px; align-self: start;">
+                    <input type="radio" name="option1" id="option1" value="user" >
+                    <label for="option1">user</label><br>
+                    <input type="radio" name="option2" id="option2" value="producer">
+                    <label for="option2">producer</label><br>
+                </div>
+            </div>
+        
+            <button class="btn waves-effect waves-light:submit" type="submit">Sign up</button>
+        </form> 
+        <div class="col s6">
+            <img src="../home/earphones.jpg" style="width: 100%; border-radius:6px; opacity: 0.85;">
+        </div>  
+    </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>

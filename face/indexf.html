@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face | Factory</title>
+    <link rel="stylesheet" href="./face-css/style.css">
+</head>
+<body style="margin: 0%;">
+    
+    <div class="nav-container"></div>
+    <div class="body-container">
+        <div class="top-container">
+            <div class="top-container-left">
+                <div class="up-picture">
+                    <img src="#"  id="myImg" alt="A" height="120" width="120">
+                        <div class="uploadpic">
+                        Select image to upload:
+                        <input type="file" name="fileToUpload" id="fileToUpload">
+                        <button type="submit" name="submit" onclick='face.js;'>Upload</button>
+                    </div>
+                </div>
+            </div>
+            <div class="top-container-right">
+                <div class="profile-info">
+                    <label for="firstName">First Name</label>
+                    <label for="lastName">Last Name</label>
+                    <br><span>a</span><span>b</span><br>
+                    <label for="userName">Username</label>
+                    <input type="text" name="UserName" id="userName" onfocusout="validateUserName()" /><br>
+                </div>
+            </div>
+        </div>
+        <div class="middle-container">
+
+
+        </div>
+        <div class="bottom-container"></div>
+    </div>
+    <div class="footer-container"></div>
+</body>
+</html>

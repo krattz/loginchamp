@@ -1,0 +1,88 @@
+.body{
+    margin-top: 0;
+    display: block;
+}
+.nav-container{
+    position: relative;
+    background-color: blue;
+    height: 52px;
+    width: 100%;
+}
+.body-container{
+    position: relative;
+    height: auto;
+    width: 100%;
+    background-color: aqua;
+}
+.top-container{
+    align-content: space-between;
+    position: relative;
+    height: 300px;
+    width: 100%;
+    background-color: yellow;
+}
+.top-container-left{
+    position: absolute;
+    /* top: 2px; */
+    width: 38%;
+    height: 100%;
+    background-color: blueviolet;
+    align-items: center;
+}
+.up-picture{
+    align-self: center;
+    border-radius: 80%;
+    background-color: black;
+    height: 83%;
+    width: 50%;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.uploadpic{
+    position: absolute;
+    /* margin-left: 30px; */
+    bottom: 3px;
+
+}
+.top-container-right{
+    display: grid;
+    align-content: space-between;
+    position: absolute;
+    /* top: 2px; */
+    right: 0px;
+    width: 62%;
+    height: 100%;
+    background-color: chartreuse;
+}
+.profile-info{
+    margin: auto;
+    width: 50%;
+    /* border: 3px solid green; */
+    padding: 10px;
+    align-content: space-between;
+}
+label{
+    margin-right: 20px;
+}
+
+span{
+    margin-right: 110px;
+}
+.middle-container{
+    width: 100%;
+    height: 300px;
+    background-color: aliceblue;
+}
+
+.bottom-container{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(211, 95, 41);
+}
+.footer-container{
+    position: relative;
+    height: 250px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+}
