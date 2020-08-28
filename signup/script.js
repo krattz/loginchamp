@@ -21,10 +21,10 @@ undefined
 function validateFirstName(){
     //Check is empty
     if(checkIfEmpty(fistName))return;
-        else
+
     //check if it only has letters
-    if(!checkIfOnlyLetters(firstName))return;
-    return true;
+    if(checkIfOnlyLetters(firstName))return;
+     else return true;
 }
 
 function validateLastName(){
@@ -32,7 +32,7 @@ function validateLastName(){
     if(checkIfEmpty(lastName))return;
         else
     //check if it only has letters
-    if(!checkIfOnlyLetters(lastName))return;
+    if(checkIfOnlyLetters(lastName))return;
     return true;
 }
 
@@ -68,11 +68,11 @@ function validateConfirmPassword(){
 //check if email is valid
 function validateEmail(){
     if(!containsCharacters(email, 5)){
-        setInvalid(email,'must be a valid email');
+        // setInvalid(email,'must be a valid email');
         return;
     }else{
-    setValid(email, 'valid');
-        return;
+    // setValid(email, 'valid');
+        return true;
     }
 }
 
@@ -103,7 +103,7 @@ function isEmpty(value){
 } 
 
 function checkIfOnlyLetters(field){
-    if(/[a-zA-Z]/.test(field.value)){
+    if(/[0-9]/.test(field.value)){
         setValid(field, 'Valid');
         return true;
     }else{
