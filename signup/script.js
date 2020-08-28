@@ -11,6 +11,7 @@ const form = document.getElementById('myForm');
 //Handle Form
 form.addEventListener('submit', function(event){
     event.preventDefault();
+    
 });
 
 //Validation colors
@@ -20,16 +21,16 @@ undefined
 function validateFirstName(){
     //Check is empty
     if(checkIfEmpty(fistName))return;
-
+        else
     //check if it only has letters
-    if(!checkIfOnlyLetters(firstname))return;
+    if(!checkIfOnlyLetters(firstName))return;
     return true;
 }
 
 function validateLastName(){
     //Check is empty
     if(checkIfEmpty(lastName))return;
-    else
+        else
     //check if it only has letters
     if(!checkIfOnlyLetters(lastName))return;
     return true;
@@ -37,7 +38,7 @@ function validateLastName(){
 
 function validatePassword(){
     //Check is empty
-    if(checkIfEmpty(password))return;
+    if(checkIfEmpty(password))return "valid";
 
     //Must have certain length
     if(!meetLength(password, 8,20))return;
@@ -52,7 +53,6 @@ function validateConfirmPassword(){
     if(checkIfEmpty(confirmPassword)  ){
         // setInvalid(confirmPassword, 'password must not be empty');
         return 'password must not be empty';
-      
     }else {
         if(password.value !== confirmPassword.value){
         setInvalid(confirmPassword, 'password must match');
@@ -69,27 +69,23 @@ function validateConfirmPassword(){
 function validateEmail(){
     if(!containsCharacters(email, 5)){
         setInvalid(email,'must be a valid email');
-    return;
-}else{
+        return;
+    }else{
     setValid(email, 'valid');
-    return;
-}
+        return;
+    }
 }
 
 function checkIfEmpty(field){
     if(isEmpty(field.value.trim())){
         setInvalid(field, `${field.name} must not be empty`)
         return;
+    }else{
+        setValid(field, 'Valid');
+        return true;
     }
-    // else {
-    //     setValid(field, 'Valid');
-    //     return false;
-    // }
 }
-function isEmpty(value){
-    if(value === '')return true;
-    return false;
-} 
+
 function setInvalid(field, message){
     field.className = 'invalid';
     field.nextElementSibling.innerHTML = message;
@@ -100,6 +96,12 @@ function setValid(field, message){
     field.nextElementSibling.innerHTML = message;
     field.nextElementSibling.style.color = green;
     }
+
+function isEmpty(value){
+    if(value === '')return true;
+    return false;
+} 
+
 function checkIfOnlyLetters(field){
     if(/[a-zA-Z]/.test(field.value)){
         setValid(field, 'Valid');
@@ -109,6 +111,7 @@ function checkIfOnlyLetters(field){
         return false;
     }
 }
+
  function meetLength(field, minLength, maxLength){
      if(field.value.length >=minLength && field.value.length<=maxLength){
          setValid(field, 'valid');
@@ -153,6 +156,7 @@ function checkIfOnlyLetters(field){
          default: return false;
      }
  }
+
  function matchWithRegEx(regEx, field, message){
     if(field.value.match(regEx)){
         setValid(field, message);
